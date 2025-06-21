@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YugoReal - Aserradero Familiar de Cauquenes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" onclick="showSection('home')" style="cursor: pointer;">
+                <div class="logo-text">
+                    <span class="logo-main">YugoReal</span>
+                    <span class="logo-sub">Aserradero</span>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a onclick="showSection('home')" data-section="home">Inicio</a></li>
+                <li><a onclick="showSection('about')" data-section="about">Nosotros</a></li>
+                <li><a onclick="showSection('catalog')" data-section="catalog">Catálogo</a></li>
+                <li><a onclick="showSection('gallery')" data-section="gallery">Galería</a></li>
+                <li><a onclick="showSection('contact')" data-section="contact">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HOME SECTION -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="container">
+                    <h1>YugoReal - Madera de Calidad</h1>
+                    <p>Empresa familiar emergente de Cauquenes, Región del Maule. Especializados en el procesamiento y venta de madera de alta calidad con tradición familiar y compromiso con la excelencia.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary" onclick="showSection('catalog')">Ver Catálogo</a>
+                        <a href="#" class="btn btn-secondary" onclick="showSection('contact')">Contactar</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="icon">🌳</div>
+                        <h3>Madera Sostenible</h3>
+                        <p>Todos nuestros productos provienen de bosques gestionados de forma responsable y sostenible.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">⚡</div>
+                        <h3>Entrega Rápida</h3>
+                        <p>Procesamiento eficiente y entrega oportuna para que tengas tu madera cuando la necesites.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🎯</div>
+                        <h3>Calidad Garantizada</h3>
+                        <p>Cada pieza pasa por rigurosos controles de calidad para asegurar la excelencia del producto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATALOG SECTION -->
+        <section id="catalog" class="section">
+            <div class="container">
+                <h2 style="text-align: center; color: var(--verde-bosque); font-size: 2.5rem; margin-bottom: 1rem;">Catálogo de Productos</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 3rem;">Descubre nuestra amplia gama de productos madereros de alta calidad</p>
+                
+                <div class="catalog-categories">
+                    <div class="category-card">
+                        <span class="icon">🏠</span>
+                        <h3>Madera para Construcción</h3>
+                        <p>Vigas, tablas y estructuras para construcción residencial y comercial.</p>
+                        <div class="product-specs">
+                            • Pino radiata<br>
+                            • Dimensiones estándar
+                        </div>
+                        <div class="price">Desde $15.000/m³</div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <span class="icon">🪑</span>
+                        <h3>Madera para Mueblería</h3>
+                        <p>Maderas selectas para carpintería fina y fabricación de muebles.</p>
+                        <div class="product-specs">
+                            • Roble<br>
+                            • Raulí<br>
+                            • Lenga<br>
+                            • Acabado premium
+                        </div>
+                        <div class="price">Desde $25.000/m³</div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <span class="icon">🏗️</span>
+                        <h3>Vigas y Pilares</h3>
+                        <p>Estructuras resistentes para proyectos de gran envergadura.</p>
+                        <div class="product-specs">
+                            • Dimensiones personalizadas<br>
+                            • Alta resistencia<br>
+                            • Secado técnico<br>
+                            • Certificación estructural
+                        </div>
+                        <div class="price">Desde $35.000/m³</div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <span class="icon">📋</span>
+                        <h3>Tableros y Chapas</h3>
+                        <p>Tableros contrachapados y chapas decorativas.</p>
+                        <div class="product-specs">
+                            • Terciado estructural<br>
+                            • Chapas decorativas<br>
+                            • MDF y OSB<br>
+                            • Diversos espesores
+                        </div>
+                        <div class="price">Desde $8.000/m²</div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <span class="icon">🏡</span>
+                        <h3>Revestimientos</h3>
+                        <p>Revestimientos exteriores e interiores de alta calidad.</p>
+                        <div class="product-specs">
+                            • Machihembrado<br>
+                            • Siding<br>
+                            • Lambriz<br>
+                            • Tratamiento exterior
+                        </div>
+                        <div class="price">Desde $12.000/m²</div>
+                    </div>
+                    
+                    <div class="category-card">
+                        <span class="icon">🌲</span>
+                        <h3>Productos Especiales</h3>
+                        <p>Productos a medida y especialidades según requerimiento.</p>
+                        <div class="product-specs">
+                            • Cortes especiales<br>
+                            • Medidas no estándar<br>
+                            • Especies nativas<br>
+                            • Asesoramiento técnico
+                        </div>
+                        <div class="price">Cotización personalizada</div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="#" onclick="showSection('contact')" class="btn btn-primary">Solicitar Cotización</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2 style="text-align: center; color: var(--verde-bosque); font-size: 2.5rem; margin-bottom: 1rem;">Galería</h2>
+                <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 3rem;">Conoce nuestras instalaciones y productos</p>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="placeholder">🏭</div>
+                        <div class="gallery-overlay">
+                            <h4>Nuestras Instalaciones</h4>
+                            <p>Moderno aserradero con tecnología de vanguardia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="placeholder">🌲</div>
+                        <div class="gallery-overlay">
+                            <h4>Materia Prima Selecta</h4>
+                            <p>Troncos de la más alta calidad de la región</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="placeholder">🪚</div>
+                        <div class="gallery-overlay">
+                            <h4>Proceso de Corte</h4>
+                            <p>Precisión y calidad en cada corte</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="placeholder">📐</div>
+                        <div class="gallery-overlay">
+                            <h4>Productos Terminados</h4>
+                            <p>Madera lista para tu proyecto</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="placeholder">🚛</div>
+                        <div class="gallery-overlay">
+                            <h4>Logística y Entrega</h4>
+                            <p>Transporte seguro y puntual</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="placeholder">👥</div>
+                        <div class="gallery-overlay">
+                            <h4>Equipo YugoReal</h4>
+                            <p>Profesionales comprometidos con la calidad</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: var(--gris-claro); border-radius: 15px;">
+                    <h3 style="color: var(--verde-bosque); margin-bottom: 1rem;">¿Quieres ver más?</h3>
+                    <p style="margin-bottom: 1.5rem;">Visítanos en nuestras instalaciones en Cauquenes o síguenos en redes sociales</p>
+                    <a href="#" onclick="showSection('contact')" class="btn btn-primary">Agendar Visita</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Nuestra Historia</h2>
+                        <p>YugoReal es una empresa familiar emergente con sede en Cauquenes, Región del Maule, Chile. Nacimos del sueño de una familia comprometida con la tradición maderera de nuestra región.</p>
+                        <p>Como empresa emergente, nos enfocamos en combinar las técnicas tradicionales de procesamiento de madera con tecnología moderna, manteniendo siempre los más altos estándares de calidad y un trato personalizado que nos caracteriza.</p>
+                        <p>Desde Cauquenes, servimos a toda la Región del Maule y más allá, ofreciendo productos madereros de calidad superior para proyectos de construcción, carpintería y decoración.</p>
+                    </div>
+                    <div class="about-image">
+                        <div style="background: linear-gradient(45deg, var(--marron-nogal), var(--verde-salvia)); height: 300px; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">🏭</div>
+                    </div>
+                </div>
+
+                <div class="values">
+                    <div class="value-item">
+                        <h3>👨‍👩‍👧‍👦 Empresa Familiar</h3>
+                        <p>Valores familiares sólidos que se reflejan en cada proyecto y relación comercial.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>🌱 Sostenibilidad</h3>
+                        <p>Comprometidos con el cuidado del medio ambiente y la gestión responsable de recursos.</p>
+                    </div>
+                    <div class="value-item">
+                        <h3>⭐ Calidad</h3>
+                        <p>Productos que cumplen con los más altos estándares de calidad de la industria.</p>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <h3>Nuestra Ubicación</h3>
+                    <div class="map-placeholder">
+                        📍 Ubicados en Cauquenes, Región del Maule, Chile<br>
+                        <strong>Dirección:</strong> Cauquenes, Región del Maule<br>
+                        <strong>Teléfono:</strong> +56 9 5213 8344
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 style="text-align: center; color: var(--verde-bosque); font-size: 2.5rem; margin-bottom: 2rem;">Contáctanos</h2>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <a href="tel:+56952138344">+56 9 5213 8344</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="icon">💬</span>
+                            <a href="https://wa.me/56952138344" target="_blank">WhatsApp: +56 9 5213 8344</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="icon">📧</span>
+                            <a href="mailto:info@yugoreal.cl">info@yugoreal.cl</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <span>Cauquenes, Región del Maule, Chile</span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="icon">🕒</span>
+                            <div>
+                                <strong>Horarios de Atención:</strong><br>
+                                Lunes a Viernes: 8:00 - 18:00<br>
+                                Sábados: 8:00 - 13:00<br>
+                                Domingos: Cerrado
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Envíanos un Mensaje</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="nombre">Nombre *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="correo">Correo Electrónico *</label>
+                                <input type="email" id="correo" name="correo" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="producto">Producto de Interés</label>
+                                <select id="producto" name="producto">
+                                    <option value="">Selecciona un producto</option>
+                                    <option value="madera-construccion">Madera para Construcción</option>
+                                    <option value="madera-decorativa">Madera Decorativa</option>
+                                    <option value="tableros">Tableros y Contrachapados</option>
+                                    <option value="vigas">Vigas y Estructuras</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje *</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Describe tu proyecto o consulta..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 YugoReal - Aserradero Familiar. Todos los derechos reservados.</p>
+            <p>Desde Cauquenes, Región del Maule, Chile - Madera de calidad para tus proyectos</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
